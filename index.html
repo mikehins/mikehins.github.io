@@ -41,7 +41,88 @@
 <nav class="bg-gray-900/80 backdrop-blur-lg border-b border-gray-800 fixed w-full top-0 z-50">
     <div class="max-w-6xl mx-auto px-4 py-4">
         <div class="flex justify-between items-center">
-            <h1 class="text-xl font-bold mono gradient-text">Mike Hins</h1>
+            <h1 class="text-xl font-bold mono gradient-text">
+                <!-- Mike Hins neon SVG logo -->
+<svg
+  width="520" height="90" viewBox="0 0 520 90"
+  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mike Hins"
+>
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1220"/>
+      <stop offset="1" stop-color="#03060c"/>
+    </linearGradient>
+
+    <!-- Neon gradient for text -->
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#58f5ff"/>
+      <stop offset="0.45" stop-color="#20d7ff"/>
+      <stop offset="1" stop-color="#00b7ff"/>
+    </linearGradient>
+
+    <!-- Glow -->
+    <filter id="glow" x="-40%" y="-80%" width="180%" height="260%">
+      <feGaussianBlur stdDeviation="2.2" result="blur1"/>
+      <feGaussianBlur stdDeviation="6" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Scanlines -->
+    <pattern id="scan" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="6" fill="transparent"/>
+      <rect y="0" width="6" height="1" fill="#7ff8ff" opacity="0.06"/>
+    </pattern>
+
+    <!-- Soft noise-ish specks (tiny dots) -->
+    <pattern id="speck" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="7" r="1" fill="#7ff8ff" opacity="0.09"/>
+      <circle cx="19" cy="12" r="1" fill="#7ff8ff" opacity="0.07"/>
+      <circle cx="12" cy="22" r="1" fill="#7ff8ff" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <!-- Plate -->
+  <rect x="1" y="1" width="518" height="88" rx="14" fill="url(#bg)"/>
+  <rect x="1" y="1" width="518" height="88" rx="14" fill="url(#scan)"/>
+  <rect x="1" y="1" width="518" height="88" rx="14" fill="url(#speck)"/>
+
+  <!-- Border -->
+  <rect x="1.5" y="1.5" width="517" height="87" rx="14"
+        fill="none" stroke="#21ddff" stroke-opacity="0.35" stroke-width="1.5"/>
+  <path d="M24 73 H496" stroke="#21ddff" stroke-opacity="0.12"/>
+
+  <!-- Accent ticks -->
+  <path d="M22 18 h18" stroke="#21ddff" stroke-opacity="0.35" stroke-width="2" stroke-linecap="round"/>
+  <path d="M480 18 h18" stroke="#21ddff" stroke-opacity="0.35" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Name -->
+  <g filter="url(#glow)">
+    <text
+      x="36" y="58"
+      fill="url(#neon)"
+      font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
+      font-size="34"
+      letter-spacing="1.5"
+    >MIKE HINS</text>
+
+    <!-- Subtle offset duplicate for “edge” -->
+    <text
+      x="36.8" y="58.8"
+      fill="#b9fbff"
+      opacity="0.16"
+      font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
+      font-size="34"
+      letter-spacing="1.5"
+    >MIKE HINS</text>
+  </g>
+</svg>
+
+            </h1>
             <div class="space-x-6 hidden md:flex">
                 <a href="#about" class="text-gray-400 hover:text-cyan-400 transition mono text-sm">About</a>
                 <a href="#expertise" class="text-gray-400 hover:text-cyan-400 transition mono text-sm">Expertise</a>
